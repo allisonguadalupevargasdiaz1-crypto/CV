@@ -1,147 +1,457 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CV — Tu Nombre</title>
-  <meta name="description" content="CV de Tu Nombre — Desarrolladora/o Web y Blockchain" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Allison Guadalupe Vargas Díaz - Futura Licenciada en Pedagogía especializada en Educación Inicial">
+    <meta name="keywords" content="Pedagogía, Educación Inicial, Portafolio Profesional, Educación">
+    <meta name="author" content="Allison Guadalupe Vargas Díaz">
+    <meta property="og:title" content="Allison Guadalupe Vargas Díaz - Portafolio Pedagógico">
+    <meta property="og:description" content="Descubre mi vocación por la educación infantil y mi proyecto de vida profesional.">
+    <meta property="og:type" content="website">
+    <title>Allison Guadalupe Vargas Díaz | Licenciada en Pedagogía</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#">Tu Nombre</a>
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
-        <a class="btn ghost" href="#contact">Contactar</a>
-        <a class="btn" href="Tu_CV.pdf" download>Descargar PDF</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero container" id="home">
-      <div class="hero-left">
-        <h1>Hola, soy <span class="accent">Tu Nombre</span></h1>
-        <p class="lead">Desarrolladora/o web & entusiasta de blockchain — creo experiencias digitales accesibles y seguras.</p>
-        <p class="meta">
-          <strong>Stack:</strong> HTML · CSS · JavaScript · React · Solidity · Web3
-        </p>
-        <div class="hero-ctas">
-          <a class="btn" href="#projects">Ver proyectos</a>
-          <a class="btn outline" href="#contact">Hablemos</a>
-        </div>
-        <ul class="social">
-          <li><a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="hero-right">
-        <div class="card profile-card" role="img" aria-label="Foto de Tu Nombre">
-          <img src="profile.jpg" alt="Foto de Tu Nombre" class="avatar">
-          <div class="card-body">
-            <h3>Tu Nombre</h3>
-            <p class="muted">Desarrolladora/o Web · Blockchain</p>
-            <div class="skills-list">
-              <div class="skill">
-                <span>Frontend</span>
-                <progress value="90" max="100">90%</progress>
-              </div>
-              <div class="skill">
-                <span>Smart Contracts</span>
-                <progress value="75" max="100">75%</progress>
-              </div>
-              <div class="skill">
-                <span>UX / UI</span>
-                <progress value="80" max="100">80%</progress>
-              </div>
+    <!-- Barra de navegación fija -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Allison</span>
             </div>
-          </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#vocacion" class="nav-link">Mi Vocación</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#ruta" class="nav-link">Ruta Educativa</a></li>
+                <li><a href="#metas" class="nav-link">Metas</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li class="theme-toggle">
+                    <button id="themeBtn" class="theme-btn" title="Cambiar tema">🌙</button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
-    </section>
+    </nav>
 
-    <section class="container about" id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre mí</h2>
-      <p>Soy desarrolladora/o con experiencia en aplicaciones web y soluciones descentralizadas. Me interesa construir productos útiles, simples y con buena experiencia de usuario.</p>
-      <ul class="highlights">
-        <li><strong>3+ años</strong> creando interfaces responsivas</li>
-        <li><strong>2 proyectos</strong> en mainnet</li>
-        <li><strong>Colaboración</strong> en equipos ágiles</li>
-      </ul>
-    </section>
-
-    <section class="container experience" id="experience" aria-labelledby="exp-title">
-      <h2 id="exp-title">Experiencia</h2>
-      <article class="job">
-        <h3>Front-end Developer — Empresa XYZ</h3>
-        <p class="muted">Ene 2023 — Presente</p>
-        <ul>
-          <li>Diseño y desarrollo de componentes reutilizables en React.</li>
-          <li>Optimización de rendimiento y accesibilidad (WCAG).</li>
-        </ul>
-      </article>
-
-      <article class="job">
-        <h3>Desarrolladora/o Blockchain — Proyecto ABC</h3>
-        <p class="muted">Jun 2021 — Dic 2022</p>
-        <ul>
-          <li>Desarrollo de smart contracts con Solidity y pruebas automatizadas.</li>
-          <li>Integración con web3 para dApps y herramientas de monitoreo.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="container projects" id="projects" aria-labelledby="proj-title">
-      <h2 id="proj-title">Proyectos destacados</h2>
-      <div class="grid">
-        <article class="project-card">
-          <h4>Nombre del proyecto 1</h4>
-          <p>Breve descripción: app web que hace X usando Y.</p>
-          <p class="muted">Tecnologías: React · Node · Solidity</p>
-          <a class="link" href="#" target="_blank" rel="noopener">Ver demo</a>
-        </article>
-
-        <article class="project-card">
-          <h4>Nombre del proyecto 2</h4>
-          <p>Breve descripción: herramienta para Z.</p>
-          <p class="muted">Tecnologías: Next.js · Hardhat</p>
-          <a class="link" href="#" target="_blank" rel="noopener">Código</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="container contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contacto</h2>
-      <p>¿Te interesa colaborar? Escríbeme:</p>
-      <form class="contact-form" action="mailto:tu-email@example.com" method="post" encType="text/plain">
-        <label>
-          Nombre
-          <input type="text" name="name" required>
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-        <label>
-          Mensaje
-          <textarea name="message" rows="4" required></textarea>
-        </label>
-        <div class="form-actions">
-          <button class="btn" type="submit">Enviar</button>
-          <a class="btn outline" href="mailto:tu-email@example.com">Enviar por email</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="https://via.placeholder.com/300x300/E8B4C8/FFFFFF?text=Allison" alt="Foto de Allison Guadalupe Vargas Díaz" class="hero-image">
+            </div>
+            <h1 class="hero-title">Allison Guadalupe Vargas Díaz</h1>
+            <p class="hero-subtitle">Futura Licenciada en Pedagogía</p>
+            <p class="hero-specialization">Especialización: Educación Inicial</p>
+            <p class="hero-phrase">"Educar es inspirar el futuro."</p>
+            <button class="btn btn-primary" onclick="scrollToSection('about')">Conoce mi historia</button>
+            <div class="decorative-elements">
+                <span class="element">✏️</span>
+                <span class="element">📖</span>
+                <span class="element">🎨</span>
+            </div>
         </div>
-      </form>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Tu Nombre — Hecho con ❤️ · <a href="https://github.com/USERNAME/CV">Repositorio</a></p>
-    </div>
-  </footer>
+    <!-- Sección Sobre mí -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Mi nombre es <strong>Allison Guadalupe Vargas Díaz</strong>, y mi vida gira en torno a un propósito fundamental: <strong>la educación infantil</strong>.</p>
+                    
+                    <p>Desde pequeña, he sentido una profunda <strong>vocación por la enseñanza</strong> y el cuidado de los niños. Creo firmemente que la educación es el motor del cambio y la herramienta más poderosa para transformar vidas.</p>
+                    
+                    <p>Me caracterizo por ser una persona <strong>empática, creativa y paciente</strong>. Entiendo que cada niño es único, con su propio ritmo de aprendizaje y necesidades especiales. Mi objetivo es crear espacios seguros, amorosos y estimulantes donde cada pequeño pueda desarrollar todo su potencial.</p>
+                    
+                    <p>La <strong>creatividad</strong> es mi aliada. A través de actividades innovadoras, juegos educativos y estrategias pedagógicas modernas, busco hacer que el aprendizaje sea una experiencia mágica y significativa.</p>
+                    
+                    <p>Porque, como digo: <em>\"Educar es sembrar hoy las semillas del futuro.\"</em></p>
+                </div>
+                <div class="about-values">
+                    <h3>Mis Valores Fundamentales</h3>
+                    <ul class="values-list">
+                        <li>💚 <strong>Empatía:</strong> Comprendo y valido las emociones de cada niño</li>
+                        <li>❤️ <strong>Amor por la enseñanza:</strong> Pasión genuina por educar</li>
+                        <li>🎨 <strong>Creatividad:</strong> Innovación en estrategias educativas</li>
+                        <li>⏳ <strong>Paciencia:</strong> Respeto por el ritmo individual de aprendizaje</li>
+                        <li>✨ <strong>Inspiración:</strong> Motivar el mejor versión de cada estudiante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js" defer></script>
+    <!-- Sección Mi Vocación -->
+    <section id="vocacion" class="section vocacion">
+        <div class="container">
+            <h2 class="section-title">Mi Vocación</h2>
+            <div class="vocacion-grid">
+                <div class="vocacion-card">
+                    <div class="card-icon">🤔</div>
+                    <h3>¿Por qué elegí Pedagogía?</h3>
+                    <p>Elegí Pedagogía porque creo que la educación es el camino más directo hacia la transformación social. Durante mis años formativos, descubrí que mi mayor alegría surge al enseñar, orientar y ver cómo otros aprenden y crecen. La Pedagogía me permite combinar teoría, práctica y humanismo en un solo propósito.</p>
+                </div>
+                <div class="vocacion-card">
+                    <div class="card-icon">🌱</div>
+                    <h3>¿Cómo quiero contribuir?</h3>
+                    <p>Deseo contribuir a la educación creando metodologías inclusivas que respeten la diversidad de cada niño. Quiero ser puente entre el conocimiento académico y las experiencias vivenciales que realmente marquen una diferencia en la vida de mis estudiantes. Mi meta es humanizar la educación.</p>
+                </div>
+                <div class="vocacion-card">
+                    <div class="card-icon">💫</div>
+                    <h3>¿Qué impacto quiero generar?</h3>
+                    <p>Quiero generar un impacto profundo y duradero en la infancia: niños seguros de sí mismos, curiosos, creativos y emocionalmente saludables. Busco ser un referente de inspiración, alguien que los niños recuerden como la maestra que creyó en ellos y los ayudó a soñar en grande.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💚</div>
+                    <h3>Empatía</h3>
+                    <p>Capacidad de conectar emocionalmente con los niños y comprenden sus necesidades</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⏳</div>
+                    <h3>Paciencia</h3>
+                    <p>Tolero variabilidad en ritmos de aprendizaje y respondo sin frustración</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Creatividad</h3>
+                    <p>Diseño actividades innovadoras y estrategias educativas originales</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗣️</div>
+                    <h3>Comunicación</h3>
+                    <p>Expreso ideas de forma clara y adaptada a diferentes audiencias</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Trabajo en Equipo</h3>
+                    <p>Colaboro efectivamente con colegas, padres y otros profesionales</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📋</div>
+                    <h3>Organización</h3>
+                    <p>Planificó estratégicamente actividades y recursos educativos</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">👑</div>
+                    <h3>Liderazgo</h3>
+                    <p>Guío y motivo a otros con ejemplo, visión y valores claros</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3>Resolución de Problemas</h3>
+                    <p>Analizo situaciones y propongo soluciones creativas y efectivas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ruta Educativa -->
+    <section id="ruta" class="section ruta">
+        <div class="container">
+            <h2 class="section-title">Mi Ruta Educativa</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Presente 2026</span>
+                        <h3>Estudiante en Formación</h3>
+                        <p>Adquiero conocimientos sólidos en pedagogía, psicología infantil y metodologías educativas innovadoras.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Futuro Cercano 2027-2028</span>
+                        <h3>Ingresar a la Licenciatura en Pedagogía</h3>
+                        <p>Curseré una licenciatura rigurosa y de calidad que me prepare para ser una educadora competente y consciente.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Mediano Plazo 2029-2030</span>
+                        <h3>Especializarme en Educación Inicial</h3>
+                        <p>Profundizaré en la atención a niños de 0-6 años, desarrollando expertise en desarrollo cognitivo, emocional y motor.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Largo Plazo 2031+</span>
+                        <h3>Profesional Transformadora</h3>
+                        <p>Seré una educadora que inspira y transforma vidas mediante la educación, dejando un legado de impacto en cada niño que eduque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Perfil Profesional -->
+    <section id="perfil" class="section perfil">
+        <div class="container">
+            <h2 class="section-title">Perfil Profesional</h2>
+            <div class="perfil-card">
+                <p class="perfil-text">
+                    Soy una futura profesional de la educación comprometida con el <strong>desarrollo integral de la infancia</strong>, enfocada en crear <strong>experiencias de aprendizaje significativas</strong> que fomenten la <strong>creatividad, la autonomía y el bienestar</strong> de cada niño. Mi propósito es ser un agente transformador que cultive no solo habilidades cognitivas, sino también valores, emociones y confianza en sí mismos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Metas -->
+    <section id="metas" class="section metas">
+        <div class="container">
+            <h2 class="section-title">Mis Metas</h2>
+            <div class="metas-grid">
+                <div class="meta-card meta-corto">
+                    <div class="meta-icon">📚</div>
+                    <h3>Corto Plazo</h3>
+                    <p><strong>Finalizar mis estudios exitosamente</strong> con excelencia académica y práctica</p>
+                </div>
+                <div class="meta-card meta-mediano">
+                    <div class="meta-icon">🎓</div>
+                    <h3>Mediano Plazo</h3>
+                    <p><strong>Graduarme de Pedagogía</strong> con las competencias necesarias para la educación inicial</p>
+                </div>
+                <div class="meta-card meta-largo">
+                    <div class="meta-icon">⭐</div>
+                    <h3>Largo Plazo</h3>
+                    <p><strong>Ser una referente en educación infantil</strong> reconocida por mi impacto y contribución</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería Inspiradora -->
+    <section id="galeria" class="section galeria">
+        <div class="container">
+            <h2 class="section-title">Galería Inspiradora</h2>
+            <p class="galeria-subtitle">Imágenes que representan mi pasión por la educación y la infancia</p>
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1427504494785-cdcb39e1f2d4?w=400&h=400&fit=crop" alt="Niños aprendiendo">
+                    <div class="galeria-overlay">
+                        <p>Aprendizaje Significativo</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1503454537688-e6694575b52a?w=400&h=400&fit=crop" alt="Creatividad infantil">
+                    <div class="galeria-overlay">
+                        <p>Creatividad Sin Límites</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=400&fit=crop" alt="Lectura compartida">
+                    <div class="galeria-overlay">
+                        <p>El Poder de la Lectura</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b06?w=400&h=400&fit=crop" alt="Desarrollo infantil">
+                    <div class="galeria-overlay">
+                        <p>Desarrollo Integral</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68b4fc5?w=400&h=400&fit=crop" alt="Educación inclusiva">
+                    <div class="galeria-overlay">
+                        <p>Inclusión y Diversidad</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="https://images.unsplash.com/photo-1530268729831-4ca02d3f247b?w=400&h=400&fit=crop" alt="Juego educativo">
+                    <div class="galeria-overlay">
+                        <p>Aprender Jugando</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CV Profesional -->
+    <section id="cv" class="section cv">
+        <div class="container">
+            <h2 class="section-title">Mi Currículum Profesional</h2>
+            <div class="cv-content">
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">📌 Datos Personales</h3>
+                    <div class="cv-item">
+                        <p><strong>Nombre:</strong> Allison Guadalupe Vargas Díaz</p>
+                        <p><strong>Objetivo Profesional:</strong> Ser Licenciada en Pedagogía especializada en Educación Inicial</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">🎯 Objetivo Profesional</h3>
+                    <div class="cv-item">
+                        <p>Convertirme en una educadora comprometida que transforme vidas mediante la educación infantil, creando ambientes inclusivos, creativos y seguros que potencien el desarrollo integral de cada niño.</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">💪 Habilidades Clave</h3>
+                    <div class="cv-item">
+                        <ul class="cv-list">
+                            <li>Empatía y comunicación efectiva</li>
+                            <li>Diseño de estrategias pedagógicas innovadoras</li>
+                            <li>Gestión de aulas inclusivas y diversas</li>
+                            <li>Evaluación y seguimiento del desarrollo infantil</li>
+                            <li>Trabajo colaborativo con padres y comunidad</li>
+                            <li>Dominio de metodologías educativas modernas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">📚 Intereses Académicos</h3>
+                    <div class="cv-item">
+                        <ul class="cv-list">
+                            <li>Psicología del desarrollo infantil</li>
+                            <li>Pedagogía Montessori y constructivismo</li>
+                            <li>Inclusión educativa y necesidades especiales</li>
+                            <li>Educación emocional en la infancia</li>
+                            <li>Literacidad temprana y desarrollo del lenguaje</li>
+                            <li>Inteligencias múltiples</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">🎓 Formación Académica</h3>
+                    <div class="cv-item">
+                        <p><strong>En Curso (2026):</strong> Educación Media Superior</p>
+                        <p><strong>En Planes (2027-2031):</strong> Licenciatura en Pedagogía con especialización en Educación Inicial</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">💼 Experiencia y Proyecciones</h3>
+                    <div class="cv-item">
+                        <p><strong>Experiencia Proyectada:</strong></p>
+                        <ul class="cv-list">
+                            <li>Prácticas profesionales en instituciones de educación inicial (durante la licenciatura)</li>
+                            <li>Desempeño como docente de educación inicial en centros educativos</li>
+                            <li>Diseño e implementación de programas educativos innovadores</li>
+                            <li>Orientación a familias en procesos educativos de sus hijos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3 class="cv-subtitle">🏆 Certificaciones Futuras</h3>
+                    <div class="cv-item">
+                        <p>Certificaciones que planifico obtener durante y después de mi formación profesional en:</p>
+                        <ul class="cv-list">
+                            <li>Formador en Pedagogía Montessori</li>
+                            <li>Especialista en Educación Inclusiva</li>
+                            <li>Instructor de Inteligencia Emocional</li>
+                            <li>Facilitador en Metodologías Activas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Frase Inspiradora Final -->
+    <section id="inspiracion" class="section inspiracion">
+        <div class="container">
+            <div class="inspiracion-content">
+                <h2 class="inspiracion-text">"Educar es sembrar hoy las semillas del futuro."</h2>
+                <p class="inspiracion-author">— Allison Guadalupe Vargas Díaz</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section contacto">
+        <div class="container">
+            <h2 class="section-title">Ponte en Contacto</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <p>
+                            <strong>Correo:</strong>
+                            <a href="mailto:allisonguadalupe@example.com">allisonguadalupe@example.com</a>
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💼</span>
+                        <p>
+                            <strong>LinkedIn:</strong>
+                            <a href="https://linkedin.com/in/allisonvargasdiaz" target="_blank">linkedin.com/in/allisonvargasdiaz</a>
+                        </p>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">💻</span>
+                        <p>
+                            <strong>GitHub:</strong>
+                            <a href="https://github.com/allisonguadalupevargasdiaz1-crypto" target="_blank">github.com/allisonguadalupevargasdiaz1-crypto</a>
+                        </p>
+                    </div>
+                </div>
+
+                <form class="contacto-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Allison Guadalupe Vargas Díaz. Todos los derechos reservados.</p>
+            <p>Diseñado con 💚 y dedicación a la educación infantil.</p>
+            <button class="btn-top" id="btnTop" title="Volver arriba">⬆️</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
