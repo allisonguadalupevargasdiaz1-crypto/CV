@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Tu Nombre</title>
+  <meta name="description" content="CV de Tu Nombre — Desarrolladora/o Web y Blockchain" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">Tu Nombre</a>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
+        <a class="btn ghost" href="#contact">Contactar</a>
+        <a class="btn" href="Tu_CV.pdf" download>Descargar PDF</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-left">
+        <h1>Hola, soy <span class="accent">Tu Nombre</span></h1>
+        <p class="lead">Desarrolladora/o web & entusiasta de blockchain — creo experiencias digitales accesibles y seguras.</p>
+        <p class="meta">
+          <strong>Stack:</strong> HTML · CSS · JavaScript · React · Solidity · Web3
+        </p>
+        <div class="hero-ctas">
+          <a class="btn" href="#projects">Ver proyectos</a>
+          <a class="btn outline" href="#contact">Hablemos</a>
+        </div>
+        <ul class="social">
+          <li><a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <div class="card profile-card" role="img" aria-label="Foto de Tu Nombre">
+          <img src="profile.jpg" alt="Foto de Tu Nombre" class="avatar">
+          <div class="card-body">
+            <h3>Tu Nombre</h3>
+            <p class="muted">Desarrolladora/o Web · Blockchain</p>
+            <div class="skills-list">
+              <div class="skill">
+                <span>Frontend</span>
+                <progress value="90" max="100">90%</progress>
+              </div>
+              <div class="skill">
+                <span>Smart Contracts</span>
+                <progress value="75" max="100">75%</progress>
+              </div>
+              <div class="skill">
+                <span>UX / UI</span>
+                <progress value="80" max="100">80%</progress>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">Sobre mí</h2>
+      <p>Soy desarrolladora/o con experiencia en aplicaciones web y soluciones descentralizadas. Me interesa construir productos útiles, simples y con buena experiencia de usuario.</p>
+      <ul class="highlights">
+        <li><strong>3+ años</strong> creando interfaces responsivas</li>
+        <li><strong>2 proyectos</strong> en mainnet</li>
+        <li><strong>Colaboración</strong> en equipos ágiles</li>
+      </ul>
+    </section>
+
+    <section class="container experience" id="experience" aria-labelledby="exp-title">
+      <h2 id="exp-title">Experiencia</h2>
+      <article class="job">
+        <h3>Front-end Developer — Empresa XYZ</h3>
+        <p class="muted">Ene 2023 — Presente</p>
+        <ul>
+          <li>Diseño y desarrollo de componentes reutilizables en React.</li>
+          <li>Optimización de rendimiento y accesibilidad (WCAG).</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Desarrolladora/o Blockchain — Proyecto ABC</h3>
+        <p class="muted">Jun 2021 — Dic 2022</p>
+        <ul>
+          <li>Desarrollo de smart contracts con Solidity y pruebas automatizadas.</li>
+          <li>Integración con web3 para dApps y herramientas de monitoreo.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="container projects" id="projects" aria-labelledby="proj-title">
+      <h2 id="proj-title">Proyectos destacados</h2>
+      <div class="grid">
+        <article class="project-card">
+          <h4>Nombre del proyecto 1</h4>
+          <p>Breve descripción: app web que hace X usando Y.</p>
+          <p class="muted">Tecnologías: React · Node · Solidity</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Ver demo</a>
+        </article>
+
+        <article class="project-card">
+          <h4>Nombre del proyecto 2</h4>
+          <p>Breve descripción: herramienta para Z.</p>
+          <p class="muted">Tecnologías: Next.js · Hardhat</p>
+          <a class="link" href="#" target="_blank" rel="noopener">Código</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contacto</h2>
+      <p>¿Te interesa colaborar? Escríbeme:</p>
+      <form class="contact-form" action="mailto:tu-email@example.com" method="post" encType="text/plain">
+        <label>
+          Nombre
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Mensaje
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button class="btn" type="submit">Enviar</button>
+          <a class="btn outline" href="mailto:tu-email@example.com">Enviar por email</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Tu Nombre — Hecho con ❤️ · <a href="https://github.com/USERNAME/CV">Repositorio</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root{
+  --bg: #0f1724;
+  --card: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  --text: #e6eef8;
+  --muted: #9bb0c9;
+  --accent: linear-gradient(90deg,#7c3aed,#06b6d4);
+  --primary: #7c3aed;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --container: 1100px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: radial-gradient(1000px 400px at 10% 10%, rgba(12,18,28,0.6), transparent),
+              linear-gradient(180deg,#071226 0%, var(--bg) 100%);
+  color:var(--text);
+  line-height:1.5;
+  font-size:16px;
+}
+
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.site-header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:30;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 0}
+.brand{font-weight:700;font-family:'Poppins',sans-serif;color:var(--text);text-decoration:none}
+.nav-actions{display:flex;gap:0.5rem;align-items:center}
+.btn{
+  display:inline-block;padding:0.6rem 1rem;border-radius:10px;background:linear-gradient(90deg,var(--primary),#06b6d4);color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600;
+}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text)}
+
+.hero{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center;padding:3rem 0}
+.hero-left h1{font-size:2.2rem;margin:0 0 0.4rem}
+.lead{color:var(--muted);margin:0 0 1rem}
+.meta{color:var(--muted);margin-bottom:1rem}
+.hero-ctas{display:flex;gap:0.75rem;margin-top:1rem}
+.social{display:flex;gap:0.5rem;margin-top:1rem;padding:0;list-style:none}
+.social a{color:var(--muted);text-decoration:none;font-size:0.95rem}
+
+.profile-card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.6);display:flex;flex-direction:column;align-items:center;transition:transform .35s}
+.profile-card:hover{transform:translateY(-6px)}
+.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,0.03);display:block;margin-bottom:0.6rem}
+
+.card-body h3{margin:0;text-align:center}
+.muted{color:var(--muted);font-size:0.95rem}
+.skills-list{width:100%;margin-top:0.6rem}
+.skill{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem}
+.skill progress{width:100%;height:8px;border-radius:10px;appearance:none}
+skill progress::-webkit-progress-bar{background:rgba(255,255,255,0.03);border-radius:10px}
+skill progress::-webkit-progress-value{background:linear-gradient(90deg,#7c3aed,#06b6d4);border-radius:10px}
+
+section h2{font-size:1.25rem;margin:0 0 1rem}
+.about .highlights{display:flex;gap:1rem;list-style:none;padding:0;margin:1rem 0 0}
+.about .highlights li{background:var(--glass);padding:0.6rem 0.9rem;border-radius:10px;color:var(--text);font-weight:600}
+
+.experience .job{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;margin-bottom:0.8rem}
+.experience .job h3{margin:0 0 0.3rem}
+
+.projects .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.project-card{padding:1rem;background:rgba(255,255,255,0.02);border-radius:10px;transition:transform .25s}
+.project-card:hover{transform:translateY(-6px)}
+.link{color:#bfefff;text-decoration:none;font-weight:600}
+
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.contact-form label{display:block;grid-column:span 2}
+.contact-form input, .contact-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.contact-form .form-actions{grid-column:span 2;display:flex;gap:0.6rem}
+
+.site-footer{padding:1.5rem 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02);margin-top:2rem}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding:2rem 0}
+  .contact-form{grid-template-columns:1fr}
+  .container{padding:1rem}
+}
